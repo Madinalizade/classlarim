@@ -2,74 +2,75 @@
 
 namespace classlarim
 {
-    class pro_dil
+   
+   class ProDil
     {
         public int Id { get; set; }
-        public string name { get; set; }
-        public string backendORfrontend { get; set; }
-        public string input { get; set; }
-        public string output { get; set; }
+        public string Name { get; set; }
+        public string BackendOrFrontend { get; set; }
+        public string İnput { get; set; }
+        public string Output { get; set; }
     }
     class Program
     {
         static void Main(string[] args)
         {
-            pro_dil cpp = new pro_dil();
+            ProDil cpp = new ProDil();
             cpp.Id = 1;
-            cpp.name = "C++";
-            cpp.backendORfrontend = "Backend";
-            cpp.input = "cin";
-            cpp.output = "cout";
+            cpp.Name = "C++";
+            cpp.BackendOrFrontend = "Backend";
+            cpp.İnput = "cin";
+            cpp.Output = "cout";
 
-            pro_dil cs = new pro_dil();
+            ProDil cs = new ProDil();
             cs.Id = 2;
-            cs.name = "C#";
-            cs.backendORfrontend = "backend";
-            cs.input = "Console.ReadLine()";
-            cs.output = "Console.WriteLine()";
+            cs.Name = "C#";
+            cs.BackendOrFrontend = "backend";
+            cs.İnput = "Console.ReadLine()";
+            cs.Output = "Console.WriteLine()";
 
-            pro_dil js = new pro_dil();
+            ProDil js = new ProDil();
             js.Id = 3;
-            js.name = "JavaScript";
-            js.backendORfrontend = "frontend";
-            js.input = "getElementById()";
-            js.output = "window.alert()";
+            js.Name = "JavaScript";
+            js.BackendOrFrontend = "frontend";
+            js.İnput = "getElementById()";
+            js.Output = "window.alert()";
 
 
-            pro_dil[] Diller = new pro_dil[3];
+            ProDil[] Diller = new ProDil[3];
             Diller[0] = cpp;
             Diller[1] = cs;
             Diller[2] = js;
 
             foreach (var m in Diller)
             {
-                Console.WriteLine(m.Id+"\n"+m.name+"\n"+m.backendORfrontend+"\n"+m.input+"\n"+m.output);
+                Console.WriteLine(m.Id+"\n"+m.Name+"\n"+m.BackendOrFrontend+"\n"+m.İnput+"\n"+m.Output);
             }
             //------------------------------------ÖZÜM DAXİL ETDİKDE-------------------------------------------------------------------
-            pro_dil[] diller = new pro_dil[2];
+            ProDil[] diller = new ProDil[2];
             for (int i = 0; i < diller.Length; i++)
             {
-                diller[i] = new pro_dil
+                diller[i] = new ProDil
                 {
                     Id = int.Parse(Console.ReadLine()),
-                    name = Console.ReadLine(),
-                    backendORfrontend = Console.ReadLine(),
-                    input = Console.ReadLine(),
-                    output = Console.ReadLine(),
+                    Name = Console.ReadLine(),
+                    BackendOrFrontend = Console.ReadLine(),
+                    İnput = Console.ReadLine(),
+                    Output = Console.ReadLine(),
                 };
                 Console.WriteLine();
                 foreach (var m in diller)
                 {
                     Console.WriteLine(m.Id);
-                    Console.WriteLine(m.name);
-                    Console.WriteLine(m.backendORfrontend);
-                    Console.WriteLine(m.input);
-                    Console.WriteLine(m.output);
+                    Console.WriteLine(m.Name);
+                    Console.WriteLine(m.BackendOrFrontend);
+                    Console.WriteLine(m.İnput);
+                    Console.WriteLine(m.Output);
                 }
-              
 
-            }
 
+            }   
         }
+
     }
 }
